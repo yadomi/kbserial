@@ -1,0 +1,11 @@
+device:
+  '/dev/ttyACM0'
+
+mapping:
+  KEY_K: wall -n hello k
+  KEY_J: 
+    on: pressed
+    run: 'wall -n pressed j'
+  KEY_H:
+    on: released
+    run: 'wall -n release h'
