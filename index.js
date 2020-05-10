@@ -1,17 +1,10 @@
-const yaml = require('js-yaml')
-const fs = require('fs');
-const SerialPort = require('serialport')
-const Readline = require('@serialport/parser-readline')
+
+const SerialPort = require('serialport');
+const Readline = require('@serialport/parser-readline');
+
+const config = require('./config');
 const interpreter = require('./interpreter');
 const { OUTPUT_REGEX } = require('./constante')
-
-
-let config;
-try {
-    config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'));
-} catch (e) {
-    console.log(e);
-}
 
 const port = new SerialPort(config.device, { baudRate: 115200 })
 const parser = new Readline()

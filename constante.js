@@ -4,5 +4,3 @@ module.exports.EV_KEY = 'EV_KEY'
 
 module.exports.STATE_PRESSED = 'pressed';
 module.exports.STATE_RELEASED = 'released';
-
-module.exports.STATE_RELEASED = 'released';
