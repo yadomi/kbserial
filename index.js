@@ -19,6 +19,11 @@ port.on('error', function(err) {
 
 parser.on('data', line => {
     const match = line.match(OUTPUT_REGEX);
-    if (match) interpret(match)
+
+    if (match) {
+        interpret(match)
+        if(config.debug) console.log(match)
+    }
+        
 })
 

@@ -1,5 +1,6 @@
-device:
-  '/dev/ttyACM0'
+device: /dev/ttyACM0
+
+debug: false
 
 mapping:
   KEY_K: wall -n sdsds k

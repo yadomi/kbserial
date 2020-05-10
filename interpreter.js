@@ -24,8 +24,6 @@ const interpreter = mappings => {
     const state = {}
     
     return event => {
-    console.log(mappings)
-
         if (event.groups.ev !== EV_KEY) return;
 
         const key = event.groups.key;
